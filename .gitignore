@@ -1,0 +1,17 @@
+.vscode
+.DS_Store
+.idea/
+.ipynb_checkpoints
+__pycache__
+ami_env/
+checkpoint.pth
+web/
+jupyter
+labels/
+uploads/
+web_app/src/AMI_Webapp/static/uploads/*
+web_app/src/AMI_Webapp/static/labels/*
+lightning_logs/
+web_app/src/model_dev/lightning_logs/
+web_app/src/AMI_Web/static/uploads/*
+web_app/src/AMI_Web/static/labels/*

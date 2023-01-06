@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Surf Camp&amp;amp; Lessons">
+  <meta name="description" content="">
+  <title>PredictCorrect</title>
+  <link rel="stylesheet" href="/static/nicepage.css" media="screen">
+  <link rel="stylesheet" href="/static/PredictCorrect.css" media="screen">
+  <script class="u-script" type="text/javascript" src="/static/jquery.js" defer=""></script>
+  <script class=" u-script" type="text/javascript" src="/static/nicepage.js" defer=""></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="{{ url_for('static', filename='upload.js') }}"></script>
+  <meta name=" generator" content="Nicepage 4.17.7, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/Logo_of_the_Technical_University_of_Munich.svg.png"
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="PredictCorrect">
+  <meta property="og:type" content="website">
+</head>
+
+<body class="u-body u-xl-mode" data-lang="en">
+  <header class="u-clearfix u-header u-sticky u-sticky-94bb u-white u-header" id="sec-12f1">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="javascript:exitUploadAlert('/')" data-page-id="59158552" class="u-image u-logo u-image-1"
+        data-image-width="800" data-image-height="416" title="Home">
+        <img src="/static/images/Logo_of_the_Technical_University_of_Munich.svg.png"
+          class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg class="u-svg-link" viewBox="0 0 24 24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="u-custom-menu u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-palette-3-base"
+                href="javascript:exitPredictAlert('/')" style="padding: 10px 20px;">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-palette-3-base"
+                href="javascript:exitPredictAlert('/uploadlabel')" style="padding: 10px 20px;">Upload &amp; Label</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-palette-3-base"
+                href="/predictcorrect" style="padding: 10px 20px;">Predict &amp; Correct</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-palette-3-base"
+                href="javascript:exitPredictAlert('/aboutus')" style="padding: 10px 20px;">AboutUs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="u-custom-menu u-nav-container-collapse">
+          <div class="u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                    href="javascript:exitPredictAlert('/')">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                    href="javascript:exitPredictAlert('/uploadlabel')">Upload &amp;
+                    Label</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/predictcorrect">Predict &amp;
+                    Correct</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link"
+                    href="javascript:exitPredictAlert('/aboutus')">AboutUs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+    <style class="u-sticky-style" data-style-id="94bb">
+      .u-sticky-fixed.u-sticky-94bb:before,
+      .u-body.u-sticky-fixed .u-sticky-94bb:before {
+        borders: top right bottom left !important
+      }
+    </style>
+  </header>
+  <section class="u-clearfix u-grey-90 u-section-1" id="carousel_0199">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-1">
+              <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h2 class="u-text u-text-default u-text-1">Get Predictions &amp; Do Corrections</h2>
+                <p class="u-text u-text-2">Upload one/more images. You will get predictions from the model. Verify the
+                  predictions and correct them if it is wrong.&nbsp;<br>When you are done with verifying and correcting,
+                  please click on the 'FINISH CORRECTING' button at the bottom of the page. This will reset the page and
+                  use your corrections to train our model with transfer learning.<br>If you would like to delete all the
+                  images from a page, click on the 'RESET IMAGES' button.<br>In the case that a prediction has a low
+                  confidence level (&lt; 0.5), the prediction will be highlighted in red since it is important to verify
+                  a prediction with low confidence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-container-style u-group u-opacity u-opacity-95 u-radius-50 u-shape-round u-white u-group-1">
+        <div class="u-container-layout u-container-layout-2">
+          <form method=post enctype=multipart/form-data>
+            <div>
+              <input type="file" name="files[]" multiple="true" autocomplete="off" required
+                class="u-border-2 u-border-white u-btn u-button-style u-grey-50 u-hover-grey-30 u-btn-1">
+            </div>
+            <div>
+              {% if wrong_extension %}
+              <p>You selected one or more file(s) that is not an image or is not an image with acceptable format. Only
+                jpg, jpeg, png, and webp files are accepted.</p>
+              {% endif %}
+            </div>
+            <button type=submit
+              class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2"
+              name="action" value="uploadfiles">submit images</button>
+          </form>
+        </div>
+      </div>
+      <form method=post enctype=multipart/form-data>
+        <button type=submit
+          class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-light-1 u-palette-3-base u-radius-50 u-btn-3"
+          name="action" value="resetfiles">reset images</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="u-clearfix u-grey-90 u-section-4" id="sec-66ed">
+    <div class="u-clearfix u-sheet-1">
+      {% if filenames %}
+      {% set total_images = images_upload|length %}
+      <div class="instruction-container">
+        <img class="u-instruction-img" src="/static/images/instructions-correct.png" alt="Image not available">
+      </div>
+      {% set row_count = (total_images/3)|round(method='ceil')|int %}
+      {% for row in range(0, row_count) %}
+      <div class="u-repeater u-repeater-1">
+        {% for col in range(0, 3) %}
+          {% set image_count = (row*3)+(col) %}
+          {% if image_count < (images_upload|length) %} 
+            {% set filename=filenames[image_count] %} 
+            {% if filename in predictions %}
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-container-style u-group u-group-1" id="{{ filename }}_image">
+                  <div class="u-container-layout u-container-layout-2">
+                    <img class="u-image u-image-round u-radius-10 u-grid-image" src="{{ images_upload[image_count] }}" alt="Image not available" onmouseover="showButtonsPredict('{{ filename|safe }}', '{{ image_count|safe }}' )">
+                  </div>
+                </div>
+                <div class="u-container-style u-grey-10 u-group u-group-2">
+                  <div class="u-container-layout u-container-layout-3">
+                    <p class="u-text u-text-default u-grid-filename">{{filename}}</p>
+                  </div>
+                </div>
+                {% set pred_conf = predictions[filename]['conf']|float %}
+                
+                  {%if pred_conf < 0.5 %} 
+                  <p class="warning-low-conf"> Warning: low confidence!</p>
+                  <div class="u-container-style u-group u-group-3">
+                  <div class="u-container-layout u-container-layout-4 u-low-conf">
+                    <h5 class="u-text u-text-default u-grid-label">{{ 'Prediction: ' + predictions[filename]['class'] }}
+                    </h5>
+                    <h5 class="u-text u-text-default u-grid-label">{{ 'Confidence: ' + predictions[filename]['conf'] }}
+                    </h5>
+                  </div>
+                  </div>
+                  {% else %}
+                  <div class="u-container-style u-group u-group-3">
+                  <div class="u-container-layout u-container-layout-4 u-ok-conf">
+                    <h5 class="u-text u-text-default u-grid-label">{{ 'Prediction: ' + predictions[filename]['class'] }}
+                    </h5>
+                    <h5 class="u-text u-text-default u-grid-label">{{ 'Confidence: ' + predictions[filename]['conf'] }}
+                    </h5>
+                  </div>
+                  </div>
+                  {% endif %}
+
+                <div id="{{ filename }}_predict">
+                  {% if filename in corrections %}
+                  {% if corrected[filename] != predictions[filename]['class'] %}
+                  <div class="u-container-style u-group u-group-3">
+                    <div class="u-container-layout u-corrected">
+                      <h5 class="u-text u-text-default u-grid-label">{{ 'Correction: ' + corrections[filename] }}</h5>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="u-clearfix u-grey-90 u-section-3" id="sec-f0b3">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <form method=post>
+        <button type=submit
+          class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-3-light-1 u-palette-3-base u-radius-50 u-btn-1"
+          name="action" value="exportlabel">EXPORT LABEL (JSON)
+        </button>
+      </form>
+      <button type=submit
+        class="u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2"
+        onclick="correctionsDone()" name="action" value="exportlabel">FINISH CORRECTING, END SESSION
+      </button>
+    </div>
+  </section>
+
+
+  <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-eddf">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <p class="u-small-text u-text u-text-variant u-text-1">TUM - Applied Machine Intelligence<br>Group 7<br>Summer
+        Semester 2022
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

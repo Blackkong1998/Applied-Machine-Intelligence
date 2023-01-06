@@ -1,0 +1,64 @@
+stages:
+  - build
+
+app:
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  stage: build
+
+  before_script:
+    - echo $CI_PROJECT_DIR
+
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile ./Dockerfile --destination $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG
+
+  only:
+    - master
+
+  tags:
+    - ami
+
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+#include:
+#- template: Security/Secret-Detection.gitlab-ci.yml
+
+#image: "gitlab.ldv.ei.tum.de:5005/ami2022/group07:latest"
+#services:
+#- docker:dind
+#stages:
+#- build
+#- test
+#- release
+
+#before_script:
+#  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN gitlab.ldv.ei.tum.de:5005
+#build:
+#  stage: build
+#  script:
+#    - docker build -t gitlab.ldv.ei.tum.de:5005/ami2022/group07 .
+  
+
+#test:
+#  stage: test
+#  script:
+#    - docker run -p 8888:8888 gitlab.ldv.ei.tum.de:5005/ami2022/group07
+
+#release-image:
+#  stage: release
+#  script:
+#    - docker pull $CONTAINER_TEST_IMAGE
+#    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+#    - docker push $CONTAINER_RELEASE_IMAGE
+#  only:
+#    - master    
+
+

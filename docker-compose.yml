@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  frontend:
+    image: web_app
+    container_name: web_app
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
+
+

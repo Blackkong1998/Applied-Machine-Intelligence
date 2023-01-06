@@ -1,0 +1,11 @@
+matplotlib==3.5.1
+Pillow==9.0.0
+torch==1.12.1
+torchvision==0.13.1
+tqdm==4.64.0
+pandas==1.4.2
+flask==2.2.2
+werkzeug==2.2.2
+pydantic~=1.9.2
+scikit-learn~=1.1.2
+ipywidgets~=8.0.1
